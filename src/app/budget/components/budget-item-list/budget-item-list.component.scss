@@ -1,0 +1,56 @@
+@import '../../../../main-styles.scss';
+
+.budget-items-section {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 0;
+  justify-content: center;
+  align-items: center;
+
+  .budget-items-container {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    max-width: 100%;
+    height: 100%;
+    justify-content: space-between;
+
+    .income-column,
+    .expenses-column {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 0;
+      flex-grow: 1;
+
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .budget-items {
+        display: flex;
+        flex-direction: column;
+        // margin-top: 20px;
+      }
+
+    }
+
+    .income-column {
+      margin-right: 35px;
+
+      h1 {
+        color: $green;
+      }
+    }
+
+    .expenses-column {
+      // margin-right: 35px;
+
+      h1 {
+        color: $red;
+      }
+    }
+  }
+
+}

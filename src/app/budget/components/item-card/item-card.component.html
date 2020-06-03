@@ -1,0 +1,13 @@
+<div class="item-card-container" (click)="onCardClick()" [ngClass]="{'income':isInCome ,'expense':!isInCome}">
+  <div class="description">
+    <p>
+      {{data.description}}
+    </p>
+  </div>
+  <div class="amount">
+    <p>
+      {{data.amount}}
+    </p>
+  </div>
+</div>
+<button class="x-button" (click)="deleteItem.emit(data)">x</button>

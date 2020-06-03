@@ -1,0 +1,18 @@
+<div class="top-bar">
+  <h1>
+    budget Calculator
+  </h1>
+</div>
+<div class="screen">
+  <h1 appCounter #screen (emitNumber)="updateTotal($event)" [to]="to" [from]="from"
+  [ngClass]="{ 'red':totalBudget<0  , 'green': totalBudget>0}">{{ totalBudget }}$
+  </h1>
+</div>
+<section class="add-item-section">
+  <div class="add-item-form">
+    <app-add-item-form-component style="padding: 10px;" (emitItem)="saveItem($event)"></app-add-item-form-component>
+  </div>
+</section>
+<hr style="margin-top:0;">
+<app-budget-item-list (update)="updateItem($event)" (delete)="deleteItem($event)" [listBudgetArray]="budgetItemArray">
+</app-budget-item-list>
