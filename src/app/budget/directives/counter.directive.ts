@@ -27,7 +27,6 @@ export class CounterDirective implements OnChanges, OnDestroy {
           step: 1
         });
       }, 750);
-      console.log(`emition du chiffre un ${x}`);
     });
   }
 
